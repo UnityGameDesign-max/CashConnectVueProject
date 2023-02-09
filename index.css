@@ -3,6 +3,9 @@
     --White: #FFFFFF;
     --Black: #000000;
     --Background: #E6EEFF;
+    --WeatherBlue: #2662FF;
+    --DarkGrey: #324567;
+    --LightGrey: #A1B3D2;
 }
 
 body {
@@ -10,11 +13,10 @@ body {
     padding: 0;
     overscroll-behavior: none;
     background-color: var(--Background);
-
  }
 
- #app {
+#app {
     display: flex;
     flex: 1;
     flex-direction: column;
- }
+}

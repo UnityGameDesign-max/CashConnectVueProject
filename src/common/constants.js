@@ -1,10 +1,3 @@
-export const FontFamilies = {
-    Light: 'arialn',
-    Regular: 'arial',
-    Bold: 'arialbd',
-    ExtraBold: 'arialblk'
-}
-
 export const Messages = {
     Errors:{
         AuthenticationError: 'Your access details have been entered incorrectly'

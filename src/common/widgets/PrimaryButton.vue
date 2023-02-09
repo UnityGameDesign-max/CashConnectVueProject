@@ -1,15 +1,19 @@
 <script>
 export default {
     props: {
-        onClickMethod: Function,
-        buttonTitle: String
+        buttonTitle: String,
+        loginClick: Function
+    },
+
+    clicked(){
+        this.$emit('clicked')
     }
 }
 </script>
 
 <template>
-    <button 
-      @click='onClickMethod'
+    <button
+     @click="clicked"
     >
         {{ buttonTitle }}
     </button>
