@@ -1,12 +1,13 @@
 <script setup>
 
+import 
+  LoginForm
+from './ui/auth/LoginForm.vue';
+
 </script>
 
 <template>
-  <header>
-    <h1>Hello World!!</h1>
-    
-  </header>
+  <LoginForm />
 </template>
 
 <style scoped>

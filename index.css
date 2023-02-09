@@ -1,0 +1,20 @@
+:root{
+    --Transparent: 'rgba(0,0,0,0)';
+    --White: #FFFFFF;
+    --Black: #000000;
+    --Background: #E6EEFF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+    background-color: var(--Background);
+
+ }
+
+ #app {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+ }
