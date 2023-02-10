@@ -16,19 +16,19 @@ export default {
     data() {
         return {
             username: '',
-            password: ''
+            password: '',
+            isLoading: false
         };
     },
     methods: {
        signIn(){
         const {username, password} = this;
-        console.log(username, password);
-        executeLoginUser(
-            {
-               username,
-               password
-            }
-        ).then((res) => console.log(res))
+        this.isLoading = true;
+        const loginRes = executeLoginUser({
+            username,
+            password
+        })
+        loginRes.then((userDetails)=> console.log(userDetails))
        }
     },
     components: { PrimaryButton }
