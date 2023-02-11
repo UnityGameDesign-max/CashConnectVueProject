@@ -1,6 +1,7 @@
 export const Messages = {
     Errors:{
-        AuthenticationError: 'Your access details have been entered incorrectly'
+        DetailsError: 'Your access details have been entered incorrectly',
+        EmptyFieldError: 'Your access details are both required'
     },
     Information: {
         PasswordRequiredMessage: 'Password is required.',

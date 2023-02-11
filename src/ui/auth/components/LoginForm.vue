@@ -8,10 +8,6 @@ import {
     executeLoginUser
 } from '@/providers/loginProvider';
 
-import { 
-    Messages 
-} from '@/common';
-
 </script>
 
 <script>
@@ -24,19 +20,26 @@ export default {
         };
     },
     methods: {
-       signIn(){
+        async signIn (){
         const {username, password} = this;
-        const loginRes = executeLoginUser({
+        this.isLoading = true;
+        const loginRes = await executeLoginUser({
             username,
             password
         })
         this.isLoading = true;
-        loginRes.then((userDetails) => {
-            console.log(userDetails)
-            this.$toast.success(
-                Messages.Information.LoggedInMessage
+        if(!loginRes.status){
+            this.isLoading = false;
+            this.$toast.error(
+                loginRes, 
             );
-        })
+        }else{
+            this.$router.push(
+                {path: '/home'}
+            )
+        }
+        console.log(loginRes)
+        
        }
     },
     components: { PrimaryButton }
@@ -62,8 +65,8 @@ export default {
               placeholder='Password'
             >
             <PrimaryButton
-              type='submit'
-              button-title='Sign In'
+                type='submit'
+                button-title='Sign In'
             />
         </div>
     </form>

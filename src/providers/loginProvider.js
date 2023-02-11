@@ -2,6 +2,14 @@ import {
     Environment
 } from '@/common';
 
+import { 
+    Messages 
+} from '@/common';
+
+import { 
+    errorHandlingToProvideResults
+} from '@/common/helpers/errorHandlingHelper';
+
 const validateUserUri = `${Environment.apiHost}/login`;
 
 export async function executeLoginUser(credentials){
@@ -14,16 +22,15 @@ export async function executeLoginUser(credentials){
             body: JSON.stringify(credentials)
         })
         const data = await response.json();
+        errorHandlingToProvideResults(response, Messages)
+
         return {
             status: response.status,
-            res: data
-        };
-        
-    }catch(error){
-        return{
-            ok: false,
-            error: error
+            response: data
         }
+    }
+    catch(error){
+        return error.message;
     }
 }
 

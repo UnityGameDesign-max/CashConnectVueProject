@@ -1,2 +1,2 @@
-export * from '/PrimaryButton.vue';
-export * from './Alert.vue';
+export * from './PrimaryButton.vue';
+export * from './Spinner.vue';

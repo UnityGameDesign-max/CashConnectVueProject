@@ -3,12 +3,20 @@ import {
 } from 'vue'
 
 import 
-App 
+    App 
 from './App.vue'
 
 import 
-Toaster
+    Toaster
 from '@meforma/vue-toaster'
 
+import { 
+    router 
+} from '@/router/routes'
 
-createApp(App).use(Toaster).mount('#app')
+
+createApp(App).use(
+    Toaster,
+    {position: 'top'}
+).use(router)
+.mount('#app')

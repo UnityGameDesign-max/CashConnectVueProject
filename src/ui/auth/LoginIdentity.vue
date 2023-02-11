@@ -23,7 +23,7 @@ from './components/LoginForm.vue';
     width: 90%;
     max-width: 600px;
     padding-block: 30px;
-    margin: 70px auto;
+    margin: 140px auto;
 }
 .identity__card:hover{
     box-shadow: 0 8px 16px 0 var(--Transparent);

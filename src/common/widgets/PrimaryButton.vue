@@ -1,13 +1,23 @@
 <script>
+
 export default {
     props: {
-        buttonTitle: String,
-        loginClick: Function
+        buttonTitle: {
+            type: String,
+            required: true
+        },
+        loginClick: {
+            type: String,
+            required: true
+        },
+        loading: {
+            type: Boolean,
+            required: false
+        }
     },
-
-    clicked(){
-        this.$emit('clicked')
-    }
+    clicked() {
+        this.$emit("clicked");
+    },
 }
 </script>
 
@@ -15,8 +25,9 @@ export default {
     <button
     class='primary-btn'
      @click="clicked"
-    >
+    > 
         {{ buttonTitle }}
+        
     </button>
 </template>
 
