@@ -1,13 +1,13 @@
 <script setup>
 
-import
-  LoginForm
-from './ui/auth/components/LoginForm.vue';
+import 
+LoginIdentity 
+from '@/ui/auth/LoginIdentity.vue';
 
 </script>
 
 <template>
-  <LoginForm />
+  <LoginIdentity />
 </template>
 
 <style scoped>

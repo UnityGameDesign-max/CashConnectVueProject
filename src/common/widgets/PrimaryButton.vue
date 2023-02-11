@@ -13,6 +13,7 @@ export default {
 
 <template>
     <button
+    class='primary-btn'
      @click="clicked"
     >
         {{ buttonTitle }}
@@ -20,5 +21,15 @@ export default {
 </template>
 
 <style scoped>
-
+    button{
+        border: none;
+        padding: 2vh 156px;
+        border-radius: 5px;
+        color: var(--White);
+        cursor: pointer;
+        background-color: var(--WeatherBlue);
+    }
+    button:hover{
+        background-color: var(--DarkWeatherBlue);
+    }
 </style>

@@ -1,11 +1,22 @@
 :root{
-    --Transparent: 'rgba(0,0,0,0)';
+    --Transparent: rgba(0,0,0,0.2);
     --White: #FFFFFF;
     --Black: #000000;
     --Background: #E6EEFF;
     --WeatherBlue: #2662FF;
+    --DarkWeatherBlue: #0536FF;
     --DarkGrey: #324567;
     --LightGrey: #A1B3D2;
+
+    --Tiny: 1.25vmin;
+    --Smallest: 1.75vmin;
+    --Smaller: 2.15vmin;
+    --Small: 2.5vmin;
+    --Normal: 3.15vmin;
+    --Big: 3.5vmin;
+    --Bigger: 4vmin;
+    --Biggest: 5.25vmin;
+    --Huge: 6.5vmin;
 }
 
 body {
@@ -13,6 +24,12 @@ body {
     padding: 0;
     overscroll-behavior: none;
     background-color: var(--Background);
+    font-family: "HelveticaNeue-Light",
+     "Helvetica Neue Light",
+      "Helvetica Neue",
+      Helvetica, Arial, 
+      "Lucida Grande", 
+      sans-serif; 
  }
 
 #app {

@@ -16,8 +16,9 @@ export async function executeLoginUser(credentials){
         const data = await response.json();
         return {
             status: response.status,
-            response:data
-        }
+            res: data
+        };
+        
     }catch(error){
         return{
             ok: false,
@@ -25,6 +26,4 @@ export async function executeLoginUser(credentials){
         }
     }
 }
-
-
 

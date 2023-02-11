@@ -8,11 +8,14 @@ import {
     executeLoginUser
 } from '@/providers/loginProvider';
 
+import { 
+    Messages 
+} from '@/common';
+
 </script>
 
 <script>
 export default {
-
     data() {
         return {
             username: '',
@@ -23,12 +26,17 @@ export default {
     methods: {
        signIn(){
         const {username, password} = this;
-        this.isLoading = true;
         const loginRes = executeLoginUser({
             username,
             password
         })
-        loginRes.then((userDetails)=> console.log(userDetails))
+        this.isLoading = true;
+        loginRes.then((userDetails) => {
+            console.log(userDetails)
+            this.$toast.success(
+                Messages.Information.LoggedInMessage
+            );
+        })
        }
     },
     components: { PrimaryButton }
@@ -36,23 +44,55 @@ export default {
 </script>
 <template>
     <form @submit.prevent="signIn">
-        <input
-          name='username'
-          v-model='username'
-          type='text'
-          placeholder='Username'
-        >
-        <input 
-          name='password'
-          v-model='password'
-          type='password'
-          password
-          placeholder='Password'
-        >
-        <PrimaryButton
-          type='submit'
-          button-title='login'
-        />
+        <div class='loginForm__container'>
+            <h1>Welcome Back</h1>
+            <p>Enter your credentials to access your account</p>
+            <input
+              name='username'
+              size='46'
+              v-model='username'
+              type='text'
+              placeholder='Username'
+            >
+            <input 
+              name='password'
+              v-model='password'
+              type='password'
+              size="46"
+              placeholder='Password'
+            >
+            <PrimaryButton
+              type='submit'
+              button-title='Sign In'
+            />
+        </div>
     </form>
-
 </template>
+
+<style scoped>
+
+h1{
+    color: var(--DarkGrey);
+    margin-bottom: 1px;
+}
+p{
+    color: var(--LightGrey);
+    margin-bottom: 40px;
+}
+.loginForm__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    border: 0.5px solid var(--LightGrey);
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 2vh;
+}
+input:focus{
+    outline: none;
+    border-color: var(--WeatherBlue);
+    box-shadow: 0 0 3px var(--WeatherBlue);
+}
+</style>
