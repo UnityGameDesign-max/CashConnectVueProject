@@ -22,7 +22,7 @@ export async function executeLoginUser(credentials){
             body: JSON.stringify(credentials)
         })
         const data = await response.json();
-        errorHandlingToProvideResults(response, Messages)
+        errorHandlingToProvideResults(response, Messages);
 
         return {
             status: response.status,

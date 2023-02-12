@@ -8,6 +8,11 @@ import {
     executeLoginUser
 } from '@/providers/loginProvider';
 
+import { 
+    authStore
+} from '@/common/provider/auth.store';
+
+
 </script>
 
 <script>
@@ -34,12 +39,11 @@ export default {
                 loginRes, 
             );
         }else{
+            authStore.addDbCredentials(loginRes.response)
             this.$router.push(
                 {path: '/home'}
             )
         }
-        console.log(loginRes)
-        
        }
     },
     components: { PrimaryButton }
@@ -65,6 +69,7 @@ export default {
               placeholder='Password'
             >
             <PrimaryButton
+                :disabled = 'isLoading'
                 type='submit'
                 button-title='Sign In'
             />

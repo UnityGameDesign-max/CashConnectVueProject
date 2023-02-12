@@ -1,12 +1,10 @@
 <script>
+import Spinner from './Spinner.vue';
+
 
 export default {
     props: {
         buttonTitle: {
-            type: String,
-            required: true
-        },
-        loginClick: {
             type: String,
             required: true
         },
@@ -18,6 +16,7 @@ export default {
     clicked() {
         this.$emit("clicked");
     },
+    components: { Spinner }
 }
 </script>
 
@@ -25,9 +24,8 @@ export default {
     <button
     class='primary-btn'
      @click="clicked"
-    > 
+    >
         {{ buttonTitle }}
-        
     </button>
 </template>
 

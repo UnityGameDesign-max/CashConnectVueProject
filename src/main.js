@@ -1,22 +1,22 @@
 import { 
     createApp
-} from 'vue'
+} from 'vue';
 
 import 
     App 
-from './App.vue'
+from './App.vue';
 
 import 
     Toaster
-from '@meforma/vue-toaster'
+from '@meforma/vue-toaster';
 
 import { 
     router 
-} from '@/router/routes'
+} from '@/navigation/routes';
 
+const app = createApp(App);
 
-createApp(App).use(
-    Toaster,
-    {position: 'top'}
-).use(router)
-.mount('#app')
+app.use(Toaster, {position: 'top'});
+app.use(router);
+app.mount('#app');
+

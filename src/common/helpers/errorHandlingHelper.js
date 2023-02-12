@@ -12,5 +12,4 @@ export function errorHandlingToProvideResults(
             message.Errors.EmptyFieldError
         );
     }
-    
 }

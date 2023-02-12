@@ -1,4 +1,4 @@
-<!-- <script>
+<script>
 
 import 
     PulseLoader      
@@ -9,9 +9,10 @@ export default {
         PulseLoader
     }
 }
+
 </script>
 
 <template>
     <PulseLoader />
 </template>
- -->
+
