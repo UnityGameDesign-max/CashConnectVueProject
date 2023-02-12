@@ -1,4 +1,5 @@
 :root{
+    /*COLOR PALLETS*/
     --Transparent: rgba(0,0,0,0.2);
     --White: #FFFFFF;
     --Black: #000000;
@@ -7,7 +8,9 @@
     --DarkWeatherBlue: #0536FF;
     --DarkGrey: #324567;
     --LightGrey: #A1B3D2;
+    --CharcoalBlack: #333;
 
+    /*FONT SIZES*/
     --Tiny: 1.25vmin;
     --Smallest: 1.75vmin;
     --Smaller: 2.15vmin;
@@ -17,6 +20,7 @@
     --Bigger: 4vmin;
     --Biggest: 5.25vmin;
     --Huge: 6.5vmin;
+    
 }
 
 body {

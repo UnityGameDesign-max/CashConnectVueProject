@@ -69,7 +69,6 @@ export default {
               placeholder='Password'
             >
             <PrimaryButton
-                :disabled = 'isLoading'
                 type='submit'
                 button-title='Sign In'
             />
