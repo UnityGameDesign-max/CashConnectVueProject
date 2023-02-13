@@ -6,7 +6,7 @@ from '@/common/widgets/PrimaryButton.vue';
 
 import {
     executeLoginUser
-} from '@/providers/loginProvider';
+} from '@/providers/authProvider';
 
 import { 
     authStore

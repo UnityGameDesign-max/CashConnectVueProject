@@ -6,7 +6,7 @@ export function splitRemoteUri(dbObject){
         return;
     }
     const remoteHostUri = 
-    `http://${dbObject.host}:${dbObject.port}`;
+    `http://${dbObject.host}:${dbObject.port}/`;
 
     return remoteHostUri;
 }

@@ -17,22 +17,12 @@ import
     Header 
 from '@/ui/home/components/Header.vue';
 
-import {
-    getAccountTransactions
-} from '@/providers/homeProvider';
-
-
 onMounted(async() => {
-    const homeRes = await getAccountTransactions(
-        authStore.dbCredentials.db
-    );
-    console.log(homeRes);
 }) 
 
 </script>
 
 
 <template>
-  
     <Header :user='authStore.dbCredentials.name'/>
 </template>
