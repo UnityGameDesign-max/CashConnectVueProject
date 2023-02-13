@@ -6,11 +6,11 @@ from '@/common/widgets/PrimaryButton.vue';
 
 import {
     executeLoginUser
-} from '@/providers/authProvider';
+} from '@/providers';
 
 import { 
     authStore
-} from '@/common/provider/auth.store';
+} from '@/common/provider';
 
 
 </script>

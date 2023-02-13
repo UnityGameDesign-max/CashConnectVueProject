@@ -2,7 +2,7 @@
 
 import 
     LoginForm 
-from './components/LoginForm.vue';
+from '@/ui/auth/components/LoginForm.vue'
 
 </script>
 

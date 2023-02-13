@@ -5,8 +5,8 @@ import {
 } from 'vue-router';
 
 import 
-    LoginIdentity
-from '@/ui/auth/LoginIdentity.vue';
+AuthIdentity
+from '@/ui/auth/AuthIdentity.vue';
 
 import 
     Home
@@ -17,7 +17,7 @@ const routes = [
     {
         path: '/',
         name: 'Login',
-        component: LoginIdentity
+        component: AuthIdentity
     },
     {
         path: '/home',

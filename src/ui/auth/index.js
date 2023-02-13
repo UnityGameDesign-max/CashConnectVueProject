@@ -1,0 +1,1 @@
+export { default as AuthIdentity } from '@/ui/auth/AuthIdentity.vue';
