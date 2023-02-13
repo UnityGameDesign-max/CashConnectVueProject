@@ -8,7 +8,7 @@ import {
 
 import { 
     errorHandlingToProvideResults
-} from '@/common/helpers/errorHandlingHelper';
+} from '@/common/helpers';
 
 const validateUserUri = `${Environment.apiHost}/login`;
 
