@@ -27,6 +27,5 @@ onMounted(async () => {
 </script>
 
 <template>
-    <p>{{ authStore.dbCredentials.db }}</p>
     <Header :user='authStore.dbCredentials.name'/>
 </template>
