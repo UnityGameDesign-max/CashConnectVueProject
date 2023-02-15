@@ -1,2 +1,2 @@
 export * from '@/providers/authProvider';
-export * from '@/providers/homeProvider';
+export * from '@/providers/syncProvider';

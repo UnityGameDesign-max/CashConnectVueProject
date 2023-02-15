@@ -13,8 +13,11 @@ export default{
 
 <template>
     <div class='header'>
-        <p class='header__user'>Welcome 
-            <span class='header__username'>{{ user }}</span>
+        <p class='header__user'>
+            Welcome 
+            <span class='header__username'>
+                {{ user }}
+            </span>
         </p>
     </div>
 </template>

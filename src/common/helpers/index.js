@@ -1,2 +1,2 @@
 export * from '@/common/helpers/errorHandlingHelper';
-export * from '@/common/helpers/splitRemoteUriHelper';
+export * from '@/common/helpers/remoteCouchHost';

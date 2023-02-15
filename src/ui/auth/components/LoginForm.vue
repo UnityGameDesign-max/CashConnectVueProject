@@ -33,6 +33,7 @@ export default {
             password
         })
         this.isLoading = true;
+        console.log(loginRes)
         if(!loginRes.status){
             this.isLoading = false;
             this.$toast.error(
@@ -69,6 +70,7 @@ export default {
               placeholder='Password'
             >
             <PrimaryButton
+                :disabled='isLoading'
                 type='submit'
                 button-title='Sign In'
             />

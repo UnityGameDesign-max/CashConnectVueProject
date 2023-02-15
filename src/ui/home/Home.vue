@@ -13,7 +13,8 @@ import
     Header 
 from '@/ui/home/components/Header.vue';
 
-onMounted(async() => {
+onMounted(() => {
+    
 }) 
 
 </script>
