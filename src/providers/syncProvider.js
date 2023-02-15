@@ -10,13 +10,15 @@ export class synchronizationProvider {
     constructor(resObj){
         this.resObj = resObj;
     }
-    static authorizationDetails = {
-        username: this.resObj.username,
-        password: this.resObj.password
+    authorizationDetails = {
+        username: this.resObj?.user,
+        password: this.resObj?.pass
     }
+
+    getRemoteHostUrl = getRemoteHost(this.resObj);
     
-    static pocdb = new PouchDB(
-        `${getRemoteHost(this.resObj)}/pouch_poc`,{
+    pocdb = new PouchDB(
+        `${getRemoteHost(this.resObj)}/pouch_poc`, {
             auth: synchronizationProvider.authorizationDetails
         }
     );
@@ -25,9 +27,11 @@ export class synchronizationProvider {
         const remoteDB = synchronizationProvider.pocdb;
         try{
             const transactionDocs = await remoteDB.find({
-                selector: {type: 'tnx'}
+                selector: {
+                    type: 'tnx'
+                }
             })
-            return transactionDocs;
+            return await transactionDocs.json();
         }catch(error){
             return error;
         }

@@ -13,13 +13,20 @@ import
     Header 
 from '@/ui/home/components/Header.vue';
 
-onMounted(() => {
-    
+import{
+    synchronizationProvider
+} from '@/providers'
+
+onMounted(async () => {
+    let syncProviderInstance = new synchronizationProvider(
+        authStore.dbCredentials.db
+    );
+
 }) 
 
 </script>
 
-
 <template>
+    <p>{{ authStore.dbCredentials.db }}</p>
     <Header :user='authStore.dbCredentials.name'/>
 </template>
